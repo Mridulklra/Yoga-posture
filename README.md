@@ -1,12 +1,52 @@
-# React + Vite
+# 🧍‍♂️ Posture Detection App – Realfy Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack posture analysis app that allows users to upload a **video performing a squat or sitting at a desk**, and returns **rule-based feedback** with clear summaries.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Tech Stack
 
-## Expanding the ESLint configuration
+| Part       | Technology                       |
+|------------|----------------------------------|
+| Frontend   | React + Vite + Tailwind CSS      |
+| Backend    | FastAPI + MediaPipe + OpenCV     |
+| Deployment | Vercel (Frontend) + Render/Railway (Backend) |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Live Links
+
+- 🔗 **Frontend**: yoga-posture.vercel.app
+- 
+
+---
+
+## 📹 Demo Video
+
+- 🎥 Watch here: https://www.loom.com/share/8bd8819b912247d4b2e05651a0883089?sid=14e3e365-7491-473f-b20e-43f304613230
+
+---
+
+## 🧠 Features
+
+- 📤 Upload video file (squat or desk sitting posture)
+- 🧠 Pose detection using MediaPipe
+- ✅ Rule-based logic:
+  - **Squat**: Flag if back angle < 150° or knee goes beyond toe
+  - **Desk Sitting**: Flag if neck bends > 30° or back isn’t straight
+- 📊 Feedback:
+  - Frame-by-frame analysis
+  - Grouped summary like:  
+    `"Back angle < 150 from 2s to 5s"`
+- 📁 Clean JSON output
+
+---
+
+## 🛠️ How to Run Locally
+
+### 🧪 Backend (FastAPI)
+
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
