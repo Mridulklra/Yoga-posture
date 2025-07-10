@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
-import LandingPage from '../../finalfrontend/src/pages/LandingPage';
+import LandingPage from './pages/LandingPage';
 
-import UploadPage from '../../finalfrontend/src/pages/UploadPage';
+
+import UploadPage from './pages/UploadPage';
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [result, setResult] = useState('');
